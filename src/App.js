@@ -11,7 +11,7 @@ import { productsAndCartLoader } from './loaders/productsAndCartLoader';
 function App() {
   const router = createBrowserRouter([
     {
-      path:'/',
+      path: '/',
       element: <Main></Main>,
       children: [
         {
@@ -20,21 +20,26 @@ function App() {
           element: <Shop></Shop>
         },
         {
-          path:'orders',
+          path: 'orders',
           loader: productsAndCartLoader,
           element: <Orders></Orders>
         },
+
+
         {
           path: 'inventory',
           element: <Inventory></Inventory>
         },
+
+
+
         {
-          path:'about',
-          element:<About></About>
+          path: 'about',
+          element: <About></About>
         }
       ]
     },
-    
+
   ])
   return (
     <div>
